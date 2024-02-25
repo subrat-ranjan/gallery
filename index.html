@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>User Images</title>
+  </head>
+  <body>
+    <div class="images">
+      <div class="heading">
+        <h2>Sample Images</h2>
+        <div class="line"></div>
+      </div>
+      <div id="imageGallery"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Sample JSON data with image URLs
+        var imageData = [
+          { image: "https://www.kasandbox.org/programming-images/avatars/spunky-sam.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/spunky-sam-green.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/purple-pi-teal.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/purple-pi-pink.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/primosaur-ultimate.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/primosaur-tree.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/primosaur-sapling.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/orange-juice-squid.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/old-spice-man.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/old-spice-man-blue.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/mr-pants.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/mr-pants-purple.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/mr-pants-green.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/marcimus.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/marcimus-red.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/marcimus-purple.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/marcimus-orange.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/duskpin-ultimate.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/duskpin-tree.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/duskpin-seedling.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/duskpin-seed.png" },
+          { image: "https://www.kasandbox.org/programming-images/avatars/duskpin-sapling.png" },
+          { image: "https://www.gstatic.com/webp/gallery3/1.sm.png" },
+          { image: "https://pixabay.com/images/download/people-2944065_640.jpg?attachment" },
+          { image: "https://cdn.shopify.com/s/files/1/1830/5085/products/VE0007_BCAA_Capsule_90ct_2048x2048.png?v=1494855182" },
+          // Add more image URLs here
+        ];
+
+        var imageGallery = document.getElementById("imageGallery");
+
+        // Iterate through each image object in the JSON array and create image elements
+        imageData.forEach(function (item) {
+          var imageContainer = document.createElement("div");
+          imageContainer.classList.add("image-container");
+
+          var imageElement = document.createElement("img");
+          imageElement.src = item.image;
+
+          imageContainer.appendChild(imageElement);
+          imageGallery.appendChild(imageContainer);
+        });
+      });
+    </script>
+  </body>
+</html>
